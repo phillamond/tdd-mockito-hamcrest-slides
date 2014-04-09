@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Test Driven Development with Mockito and Hamcrest - Phil Lamond</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -37,315 +37,259 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-
+					<h2>Test Driven Development</h2>
+					<h3>Using JUnit, Mockito and Hamcrest for Java</h3>
+					<h4>Phil Lamond</h4>
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+						This talk is about TDD in Java using JUnit, and combining with Mockito for dynamic mocking and Hamcrest matchers
+						to provide descriptive assertions.
 					</aside>
 				</section>
 
-				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
+					<h2>Coming up:</h2>
 					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
+						<li class="fragment roll-in">Phil's Experience of TDD</li>
+						<li class="fragment roll-in">What Is Test Driven Development</li>
+						<li class="fragment roll-in">Schools of TDD</li>
+						<li class="fragment roll-in">Why do TDD?</li>
+						<li class="fragment roll-in">What Is Mocking, Stubbing and Spying?</li>
+						<li class="fragment roll-in">Worked Example/Demo</li>
+						<li class="fragment roll-in">Techniques For Adoption</li>
+						<li class="fragment roll-in">Recommended Reading and Salient Hyperlinks</li>
+						<li class="fragment roll-in">Any Questions?</li>
+						<li class="fragment roll-in">Lunch and Pontification!</li>
 					</ol>
 				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon.css#/themes">Moon</a> -
-						<a href="?theme=simple.css#/themes">Simple</a> -
-						<a href="?theme=solarized.css#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
+				<section>
+					<h2>My experience of TDD</h2>
+					<h3>(at the BBC)</h3>
+					<aside class="notes">
+						- introduced to idea of TDD in 2005 at BBC iF&L
+						- tended to write tests after the fact
+						- no xUnit pattern test framework for the Perl programming language at the time
+						- was introduced to Java and JUnit a couple of years later
+						- often had trouble setting up dependencies in unit tests
+						- was introduced to Mockito and Hamcrest by a colleague and then received training
+					</aside>
 				</section>
 
 				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
+					<h2>What Is Test Driven Development?</h2>
+					<p class="fragment roll-in">"Test-driven development is a way of managing fear during programming" - Kent Beck</p>
+					<p class="fragment roll-in">Test harness for production code by writing the tests <strong><em>FIRST</em></strong></p>
+					<p class="fragment roll-in">Test the <strong><em>behaviours</em></strong> of program units</p>
+					<p class="fragment roll-in"><strong><em>Describe</em></strong> those behaviours</p>
+					<aside class="notes">
+        				Fear caused by not being able to see the end solution of a problem from the beginning.
+        				Fear has negative effects. It makes you:
+        				- tentative
+        				- less communicative
+        				- shy away from feedback
+        				- grumpy
+    				</aside>
 				</section>
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
+				<section>
+					<h2>What Is Test Driven Development?</h2>
+					<p class="fragment roll-in">By specifying required behaviours in tests, production code design can be aided</p>
+					<p class="fragment roll-in">Characterised by the test-code-refactor cycle</p>
+					<img src="images/red-green-refactor1.png" class="fragment roll-in"/>
+					<aside class="notes">
+        				Also known as the 'red-green-refactor cycle':
+        				- Red: write a little test that doesn't work, and perhaps doesn't even compile at first
+        				- Green: make the tests work quickly, committing whatever sins necessaryin the process
+        				- Refactor: eliminate all of the duplication created in merely getting the test to work
+    				</aside>
+				</section>
+
+				<section>
+					<h2>What Is Test Driven Development?</h2>
+					<p class="fragment roll-in">If done consistently production code tends to end up with ~90% test coverage</p>
+					<p class="fragment roll-in">Canonical text is ‘<em>Test Driven Development by Example</em>’ by <strong><em><a href="http://en.wikipedia.org/wiki/Kent_Beck">Kent Beck</a></em></strong><br/>(credited with creating the <strong><em>Extreme Programming</em></strong> movement and <strong><em>Agile software development</em></strong> - aka TDD...)</p>
+					<img src="images/tdd_kent_beck.jpg" class="fragment roll-in"/>
+					<p class="fragment roll-in">Heavily influences the modern-day <strong><em>Software Craftsmanship</em></strong> movement</p>
+				</section>
+
+				<section>
+					<h2>Schools of TDD</h2>
+					<h3>Classic TDD</h3>
+					<h3>London School (Mockist)</h3>
+					<p class="fragment roll-in">Check what <a href=""><strong><em>Jason Gorman</em></strong></a> has to say about it</p>
+					<aside class="notes">
+        				
+    				</aside>
+				</section>
+
+				<section>
+					<h2>Classic TDD</h2>
+					<p class="fragment roll-in">Often seen as <em>algorithmic</em> in emphasis</p>
+					<p class="fragment roll-in">Integer -> roman numerals pseudo-code example (from Gorman's blog)</p>
+					<pre class="fragment roll-in"><code data-trim contenteditable>
+Test #1: 1 = I -> return "I"
+
+Test #2: 2 = II -> if integer = 1 return "I" else return "II"
+
+Test #3: 3 = III -> while(integer > 0) concatenate "I" to result and decrement integer
 					</code></pre>
+					<p class="fragment roll-in">Triangulate (not strangulate) through the addition of tests until the general solution is found</p>
+					<aside class="notes">
+        				Start with the simplest test "roman numeral for 1 is I". The simplest solution might be to return the hardcoded literal value "I". Then we move on to the next easiest failing test
+    				</aside>
 				</section>
 
 				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
+					<h2>London School (Mockist)</h2>
+					<p class="fragment roll-in">Focuses on roles, responsibilities and collaborator <strong><em>interactions</em></strong> (as opposed to alogrithms)</p>
+					<p class="fragment roll-in">Design emphasis is <strong><em>message passing</em></strong> based (as opposed to algorithmic)</p>
+					<aside class="notes">
+        				
+    				</aside>
 				</section>
 
 				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+					<h2>London School (Mockist)</h2>
+					<p class="fragment roll-in">General modus operandi:
+						<ol>
+							<li class="fragment roll-in">Identify roles (interfaces), what they are responsible for and what their colloborators are, using <strong><em><a href="http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID</a></em></strong> style principles. This can be done in the tests</li>
+							<li class="fragment roll-in">Write a test for a behaviour on the subject under test, faking or <strong><em>mocking</em></strong> its immediate collaborators (dependencies)</li>
+							<li class="fragment roll-in">Set up the expectations of what queries on mocks will return</li>
+							<li class="fragment roll-in">Write verifications for the interactions the subject-under-test should have had with it's collaborators</li>
+						</ol>
 					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
+					<aside class="notes">
+        				
+    				</aside>
 				</section>
 
 				<section>
-					<h2>Pretty Code</h2>
+					<h2>London School (Mockist)</h2>
+					<p class="fragment roll-in">Use mocking library matchers to <strong><em>constrain method parameters</em></strong></p>
+					<p class="fragment roll-in"><strong><em>Hamcrest matchers</em></strong> can be used in assertions about output of a method invocation for object equality or part equality</p>
+					<p class="fragment roll-in">Dynamic mocking/stubbing frameworks: <strong><em><a href="http://code.google.com/p/mockito/">Mockito</a></em></strong>, <strong><em><a href="http://jmock.org/">JMock</a></em></strong> and <strong><em><a href="http://easymock.org/">EasyMock</a></em></strong></p>
+					<p class="fragment roll-in">Also <strong><em>PowerMock</em></strong>(ito) for extreme cases (mocking static or final classes/methods)</p>
+					<aside class="notes">
+        				Hamcrest (ported across multiple languages). Mocking frameworks also have their own matchers, mainly for parameters
+    				</aside>
+				</section>
+
+				<section>
+					<h3>Example JUnit test using Mockito &amp; Hamcrest</h3>
 					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+@RunWith(MockitoJUnitRunner.class)
+public class ThingWithBehaviourTest {
 
-    var nodes = document.querySelectorAll( selector );
+    @Mock
+    private CombobulationConvertor combobulationConvertor;
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+    @Mock
+    private LaunchParser launchParser;
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
+    private ThingWithBehaviour thing;
+
+    @Before
+    public void setUp() {
+        // subject under test
+        thing = new ThingWithBehaviour(launchParser, combobulationConvertor);
     }
-  }
+
+    @Test
+    public void shouldCombobulateSuccesfully() {
+        CombobulationConfig combobulationConfig = new CombobulationConfig();
+        String configJson = "{\"some\":\"json\"}";
+        Combobulation givenCombobulation = new Combobulation();
+
+        // check that dependencies are called with the correct parameters
+        when(launchParser.parse(configJson)).thenReturn(combobulationConfig);
+        when(combobulationConvertor.convert(combobulationConfig)).thenReturn(givenCombobulation);
+
+        // invoke the subject under test
+        Combobulation actualCombobulation = thing.combobulate(configJson);
+
+        // check invocation interactions with mocked dependencies
+        verify(launchParser, times(1)).parse(configJson);
+        verify(combobulationConvertor, times(1)).convert(combobulationConfig);
+
+        // check that the same instance of a Combobulation is bubbled up by the SUT
+        assertThat(actualCombobulation, is(sameInstance(givenCombobulation)));
+    }
 }
 					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					<p class="fragment roll-in">
+        				Mockito static 'when' and 'thenReturn' methods can be swapped for the more descriptive English BDDMockito statics 'given' amd 'willReturn'
+    				</p>
+    				<aside class="notes">
+						Other features of Mockito: Spies, argument captors, custom argument matchers (argThat), multiple expectations on behaviour stubs.
+						Spies wrap real objects and allow you to modify their behaviour
+    				</aside>
+				</section>				
+
+				<section>
+					<h2>Why do TDD?</h2>
+					<p class="fragment roll-in">Leads to less bug-ridden, ball-of-mud code, with 1000-line long classes with massive methods that do too many things, have intertwined behaviours that are too closely coupled</p>
+					<p class="fragment roll-in">So cleaner, more readable code</p>
+					<p class="fragment roll-in">A comprehensive regression harness develops</p>
+					<p class="fragment roll-in">Your production code is protected against accidental breakage upon well-intended change</p>
+					<aside class="notes">
+						A comprehensive regression harness develops, protecting your production code against accidental breakage upon well-intended change
+    				</aside>
 				</section>
 
 				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
+					<h2>Worked Example/Demo - Postman Pat Special Delivery Service Booking System</h2>
+					<p class="fragment roll-in"><a href="https://github.com/phillamond/tdd-mockito-hamcrest">Here's one I made earlier</a></p>
+					<aside class="notes">
+        				
+    				</aside>
 				</section>
 
 				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
+					<h2>Techniques For Adoption</h2>
+					<p class="fragment roll-in">Training e.g. by people like <a href="http://www.codemanship.co.uk/tdd.html">Jason Gorman</a> or at <a href="https://skillsmatter.com/courses/503-sandro-mancuso-s-crafting-code-course">Skillsmatter</a></p>
+					<p class="fragment roll-in">Pair programming e.g. doing ping-pong</p>
+					<p class="fragment roll-in">Just doing it (requires a degree of self-discipline)</p>
+					<aside class="notes">
+        				Ping-pong: one developer writes a test, the other implements, then vice-versa.
+    				</aside>
 				</section>
 
 				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
+					<h2>Key Figures, Recommended Reading and Salient Hyperlinks</h2>
+					<p class="fragment roll-in">Kent Beck ('father of XP and TDD') - author of <a href="books.google.co.uk/books?isbn=0321146530">Test Driven Development by Example</a> and <a href="books.google.co.uk/books?isbn=0201616416">Extreme Programming Explained</a></p>
+					<p class="fragment roll-in">Ward Cunningham (inventor of the wiki) - contributed to CRC cards and XP methodologies of OO software development</p>
+					<p class="fragment roll-in">Robert C. Martin (aka Uncle Bob, TDD and clean code exponent) - author of <a href="http://books.google.co.uk/books?isbn=0136083250">Clean code</a>, <a href="http://books.google.co.uk/books?isbn=0132542889">The Clean Coder</a> and <a href="http://books.google.co.uk/books?isbn=0201709376">Extreme Programming in Practice</a></p>
+					<p class="fragment roll-in">Michael Feathers - author of <a href="http://books.google.co.uk/books?isbn=0132931753">Working Effectively with Legacy Code</a></p>
+					<aside class="notes">
+        				
+    				</aside>
 				</section>
 
 				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
+					<h2>Key Figures, Recommended Reading and Salient Hyperlinks</h2>
+					<p class="fragment roll-in">Steve Freeman - co-author of <a href="http://books.google.co.uk/books?isbn=0321699769">Growing Object-Oriented Software, Guided by Tests</a></p>
+					<p class="fragment roll-in">Nat Pryce - co-author of <a href="http://books.google.co.uk/books?isbn=0321699769">Growing Object-Oriented Software, Guided by Tests</a></p>
+					<p class="fragment roll-in">(Both the above were involved in the XTC - Extreme Tuesday Club in London - out of which came their book)</p>
+					<p class="fragment roll-in">Jason Gorman - software craftsmanship <a href="http://codemanship.co.uk/parlezuml/blog/">blogger and trainer</a></p>
+					<aside class="notes">
+        				
+    				</aside>
 				</section>
 
 				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
+					<h2>Any Questions?</h2>
+					<p><em>Please be nice!</em></p>
+					<p>These slides: <a href="http://tdd-mockito-hamcrest.paperplane.io/">http://tdd-mockito-hamcrest.paperplane.io/</a></p>
+					<aside class="notes">
+        				
+    				</aside>
 				</section>
 
 				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
+					<h2>Lunch and Discussion!</h2>
+					<aside class="notes">
+        				
+    				</aside>
 				</section>
 
 			</div>
